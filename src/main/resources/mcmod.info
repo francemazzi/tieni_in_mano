@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tieniinmano",
+  "name": "Tieni in Mano",
+  "description": "Oggetti in mano piu fisici in prima persona.",
+  "version": "${version}",
+  "mcversion": "1.8",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Francesco"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
