@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "tieni_in_mano",
+  "version": "${version}",
+  "name": "Tieni in Mano",
+  "description": "Oggetti in mano piu fisici in prima persona.",
+  "authors": ["Francesco"],
+  "environment": "client",
+  "entrypoints": {"client": ["it.francesco.tieniinmano.Cliente"]},
+  "mixins": ["mescole.json"],
+  "depends": {"fabricloader": ">=0.19.2", "minecraft": "26.1.2", "java": ">=8"}
+}
