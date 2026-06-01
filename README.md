@@ -2,6 +2,10 @@
 
 Mod client-side per **Fabric** che rende gli oggetti tenuti in mano più naturali in prima persona: posizione, rotazione e movimento leggermente più fisici, con pose diverse per armi, blocchi, cibo e oggetti generici.
 
+## Note sul progetto
+
+Questo è un **vecchio progetto** ripreso in seguito. Il codice e la documentazione sono stati rivisti e ottimizzati con **Cursor** e **Claude Code**, mantenendo però l’**ambiente old school** originale (Java 8, struttura minimale, stile compatto del sorgente) per coerenza con la versione iniziale — non è un refactor moderno, ma un aggiornamento leggero di un mod già esistente.
+
 ## Requisiti
 
 | Componente | Versione |
