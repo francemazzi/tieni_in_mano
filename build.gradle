@@ -1,43 +1,9 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            name = "forge"
-            url = "http://files.minecraftforge.net/maven"
-        }
-    }
-    dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
-    }
-}
-
-apply plugin: 'forge'
-
-version = "0.1.0"
-group = "it.francesco"
-archivesBaseName = "tieni_in_mano"
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-minecraft {
-    version = "1.8-11.14.1.1337"
-    runDir = "eclipse"
-}
-
-dependencies {
-}
-
-processResources {
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
-
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-        expand 'version': project.version, 'mcversion': project.minecraft.version
-    }
-
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
-}
+plugins{id 'fabric-loom' version '1.16.2'}
+version=mod_version
+group=maven_group
+base{archivesName=archives_base_name}
+loom{splitEnvironmentSourceSets();mods{tieni_in_mano{sourceSet sourceSets.main;sourceSet sourceSets.client}}}
+repositories{maven{url='https://maven.fabricmc.net/'};mavenCentral()}
+dependencies{minecraft "com.mojang:minecraft:$minecraft_version";mappings "net.fabricmc:intermediary:0.0.0:v2";modImplementation "net.fabricmc:fabric-loader:$loader_version"}
+java{toolchain{languageVersion=JavaLanguageVersion.of(8)};sourceCompatibility=JavaVersion.VERSION_1_8;targetCompatibility=JavaVersion.VERSION_1_8}
+processResources{inputs.property 'version',version;filesMatching('fabric.mod.json'){expand version:version}}

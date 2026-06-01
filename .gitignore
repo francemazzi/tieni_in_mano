@@ -1,12 +1,5 @@
 .gradle/
 build/
-eclipse/
 run/
 out/
 *.class
-*.launch
-.settings/
-.classpath
-.project
-*.iml
-.idea/
